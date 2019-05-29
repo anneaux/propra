@@ -15,6 +15,12 @@ const double G = 6.673e-11;   		// Gravitationskonstante
 const double MS = 1.99e30;		// Sonnenmasse
 const double AE = 1.5e11;		// Astronomische Einheit
 
+const double m1 = 5.0e-5*MS;     	// Masse Guertel 1
+const double m2 = 1.0e-7*MS;     	// Masse Guertel 2
+const double a1 = 60.0*AE;              // Große Bahnhalbachse innerer Guertel
+const double a2 = 150.0*AE;		// Große Bahnhalbachse äußerer Guertel
+
+
 // Integration functions adapted from Press et al. (Numerical recipes in C++)
 
 double LogIntegrate(double A, double B,
@@ -219,7 +225,7 @@ bool timeloop(const double &t0,const double &tf,const double &dt,const double &e
     A[1][i] =
         A[1][i-1]-sqrt(1 - (A1prev * A1prev)) /
         (A1prev * sqrt(G * m1 * a1)) *
-        R_omega(A1prev, A0prev, A2prev, A3prev, m1)*dt;  // e2
+        R_omega(A1prev, A0prev, A3prev, A2prev, m1)*dt;  // e2
         cout << "1"<< endl;
     A[2][i] =
         A[2][i-1]+sqrt(1 - (A0prev * A0prev)) /
@@ -240,12 +246,6 @@ bool timeloop(const double &t0,const double &tf,const double &dt,const double &e
   return true;
 }
 
-const double m1 = 5.0e-5*MS;     	// Masse Guertel 1
-const double m2 = 1.0e-7*MS;     	// Masse Guertel 2
-const double a1 = 60.0*AE;              // Große Bahnhalbachse innerer Guertel
-const double a2 = 150.0*AE;		// Große Bahnhalbachse äußerer Guertel
-
-
 int main() {
   
   double t0=0.0;
@@ -261,9 +261,9 @@ int main() {
   double omega1=TWOPI/6.0;
   double omega2=0.009;
   
-timeloop(t0,tf,dt,ecc1,ecc2,omega1,omega2);
-// cout<< R_e(ecc1,ecc2,omega1,omega2,1e-5*MS) <<endl;
 
+cout<< R_omega(ecc2, ecc1, omega2, omega1, m1) <<endl;
+timeloop(t0,tf,dt,ecc1,ecc2,omega1,omega2);
  
 
 
