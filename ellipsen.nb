@@ -10,72 +10,75 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8014,        186]
-NotebookOptionsPosition[      7584,        168]
-NotebookOutlinePosition[      7918,        183]
-CellTagsIndexPosition[      7875,        180]
+NotebookDataLength[      8905,        201]
+NotebookOptionsPosition[      8475,        183]
+NotebookOutlinePosition[      8809,        198]
+CellTagsIndexPosition[      8766,        195]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
-  RowBox[{"a1", "=", "0.6"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"a2", "=", "1"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Clear", "[", "ecc1", "]"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
-  RowBox[{
-   RowBox[{"ParametricPlot", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ParametricPlot", "[", 
+     RowBox[{
+      RowBox[{"{", 
        RowBox[{
-        RowBox[{"RotationMatrix", "[", "omega1", "]"}], ".", 
-        RowBox[{"{", 
-         RowBox[{
+        RowBox[{
+         RowBox[{"RotationMatrix", "[", "omega1", "]"}], ".", 
+         RowBox[{"{", 
           RowBox[{
-           RowBox[{"a1", "*", 
-            RowBox[{"Cos", "[", "t", "]"}]}], "+", 
-           RowBox[{"ecc1", "*", "a1"}]}], ",", 
+           RowBox[{
+            RowBox[{"a1", "*", 
+             RowBox[{"Cos", "[", "t", "]"}]}], "+", 
+            RowBox[{"ecc1", "*", "a1"}]}], ",", 
+           RowBox[{
+            RowBox[{"Sqrt", "[", 
+             RowBox[{"1", "-", 
+              RowBox[{"ecc1", "^", "2"}]}], "]"}], "*", "a1", "*", 
+            RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}]}], ",", 
+        RowBox[{
+         RowBox[{"RotationMatrix", "[", "omega2", "]"}], ".", 
+         RowBox[{"{", 
           RowBox[{
-           RowBox[{"Sqrt", "[", 
-            RowBox[{"1", "-", 
-             RowBox[{"ecc1", "^", "2"}]}], "]"}], "*", "a1", "*", 
-           RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}]}], ",", 
-       RowBox[{
-        RowBox[{"RotationMatrix", "[", "omega2", "]"}], ".", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"a2", "*", 
-            RowBox[{"Cos", "[", "t", "]"}]}], "+", 
-           RowBox[{"ecc2", "*", "a2"}]}], ",", 
-          RowBox[{
-           RowBox[{"Sqrt", "[", 
-            RowBox[{"1", "-", 
-             RowBox[{"ecc2", "^", "2"}]}], "]"}], "*", "a2", "*", 
-           RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}]}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"t", ",", "0", ",", 
-       RowBox[{"2", "*", "Pi"}]}], "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
-   RowBox[{"{", 
-    RowBox[{"omega1", ",", "0", ",", "Pi", ",", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"omega2", ",", "0", ",", "Pi", ",", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"ecc1", ",", "0", ",", "1", ",", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"ecc2", ",", "0", ",", "1", ",", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}]}], 
-  "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]"}], "Input",
+           RowBox[{
+            RowBox[{"a2", "*", 
+             RowBox[{"Cos", "[", "t", "]"}]}], "+", 
+            RowBox[{"ecc2", "*", "a2"}]}], ",", 
+           RowBox[{
+            RowBox[{"Sqrt", "[", 
+             RowBox[{"1", "-", 
+              RowBox[{"ecc2", "^", "2"}]}], "]"}], "*", "a2", "*", 
+            RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "0", ",", 
+        RowBox[{"2", "*", "Pi"}]}], "}"}]}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"omega1", ",", "0", ",", 
+      RowBox[{"2", "*", "Pi"}], ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"omega2", ",", "0", ",", 
+      RowBox[{"2", "*", "Pi"}], ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"ecc1", ",", "0", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"ecc2", ",", "0", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a1", ",", "0", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a2", ",", "0", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Open\>\""}]}], "}"}]}], 
+   "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]"}]], "Input",
  CellChangeTimes->{{3.766482918599988*^9, 3.766483070156789*^9}, {
    3.766483192649984*^9, 3.766483232033951*^9}, {3.7664832669003553`*^9, 
    3.766483321796277*^9}, {3.766483367103657*^9, 3.7664834793149967`*^9}, {
@@ -87,34 +90,42 @@ Cell[BoxData[{
    3.7664844485822077`*^9}, {3.766484548322968*^9, 3.766484672526013*^9}, 
    3.767079675699483*^9, {3.7670797401167192`*^9, 3.767079763780136*^9}, {
    3.7670871726476927`*^9, 3.767087180726162*^9}, {3.767089495066674*^9, 
-   3.767089495072551*^9}},ExpressionUUID->"799f83a3-8923-401f-a0aa-\
+   3.767089495072551*^9}, {3.767686169619688*^9, 3.767686197019957*^9}, {
+   3.767686231591462*^9, 
+   3.767686236573183*^9}},ExpressionUUID->"799f83a3-8923-401f-a0aa-\
 f0684d6fe713"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`ecc1$$ = 0.558, $CellContext`ecc2$$ = 
-    0.33, $CellContext`omega1$$ = 0, $CellContext`omega2$$ = 0, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`omega1$$], 0, Pi}, {
-      Hold[$CellContext`omega2$$], 0, Pi}, {
+   DynamicModuleBox[{$CellContext`a1$$ = 0, $CellContext`a2$$ = 
+    0, $CellContext`ecc1$$ = 0, $CellContext`ecc2$$ = 
+    0, $CellContext`omega1$$ = 0, $CellContext`omega2$$ = 0, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`omega1$$], 0, 2 Pi}, {
+      Hold[$CellContext`omega2$$], 0, 2 Pi}, {
       Hold[$CellContext`ecc1$$], 0, 1}, {
-      Hold[$CellContext`ecc2$$], 0, 1}}, Typeset`size$$ = {
-    360., {168., 172.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`omega1$121067$$ = 
-    0, $CellContext`omega2$121068$$ = 0, $CellContext`ecc1$121069$$ = 
-    0, $CellContext`ecc2$121070$$ = 0}, 
+      Hold[$CellContext`ecc2$$], 0, 1}, {
+      Hold[$CellContext`a1$$], 0, 1}, {
+      Hold[$CellContext`a2$$], 0, 1}}, Typeset`size$$ = {360., {178., 182.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`omega1$449064$$ = 0, $CellContext`omega2$449065$$ = 
+    0, $CellContext`ecc1$449066$$ = 0, $CellContext`ecc2$449067$$ = 
+    0, $CellContext`a1$449068$$ = 0, $CellContext`a2$449069$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
-      "Variables" :> {$CellContext`ecc1$$ = 0, $CellContext`ecc2$$ = 
+      "Variables" :> {$CellContext`a1$$ = 0, $CellContext`a2$$ = 
+        0, $CellContext`ecc1$$ = 0, $CellContext`ecc2$$ = 
         0, $CellContext`omega1$$ = 0, $CellContext`omega2$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`omega1$$, $CellContext`omega1$121067$$, 0], 
-        Hold[$CellContext`omega2$$, $CellContext`omega2$121068$$, 0], 
-        Hold[$CellContext`ecc1$$, $CellContext`ecc1$121069$$, 0], 
-        Hold[$CellContext`ecc2$$, $CellContext`ecc2$121070$$, 0]}, 
+        Hold[$CellContext`omega1$$, $CellContext`omega1$449064$$, 0], 
+        Hold[$CellContext`omega2$$, $CellContext`omega2$449065$$, 0], 
+        Hold[$CellContext`ecc1$$, $CellContext`ecc1$449066$$, 0], 
+        Hold[$CellContext`ecc2$$, $CellContext`ecc2$449067$$, 0], 
+        Hold[$CellContext`a1$$, $CellContext`a1$449068$$, 0], 
+        Hold[$CellContext`a2$$, $CellContext`a2$449069$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -122,22 +133,24 @@ Cell[BoxData[
          Typeset`skipInitDone$$}, "Body" :> ParametricPlot[{
          Dot[
           
-          RotationMatrix[$CellContext`omega1$$], {$CellContext`a1 
-            Cos[$CellContext`t] + $CellContext`ecc1$$ $CellContext`a1, 
-           Sqrt[1 - $CellContext`ecc1$$^2] $CellContext`a1 
+          RotationMatrix[$CellContext`omega1$$], {$CellContext`a1$$ 
+            Cos[$CellContext`t] + $CellContext`ecc1$$ $CellContext`a1$$, 
+           Sqrt[1 - $CellContext`ecc1$$^2] $CellContext`a1$$ 
            Sin[$CellContext`t]}], 
          Dot[
           
-          RotationMatrix[$CellContext`omega2$$], {$CellContext`a2 
-            Cos[$CellContext`t] + $CellContext`ecc2$$ $CellContext`a2, 
-           Sqrt[1 - $CellContext`ecc2$$^2] $CellContext`a2 
+          RotationMatrix[$CellContext`omega2$$], {$CellContext`a2$$ 
+            Cos[$CellContext`t] + $CellContext`ecc2$$ $CellContext`a2$$, 
+           Sqrt[1 - $CellContext`ecc2$$^2] $CellContext`a2$$ 
            Sin[$CellContext`t]}]}, {$CellContext`t, 0, 2 Pi}], 
-      "Specifications" :> {{$CellContext`omega1$$, 0, Pi, Appearance -> 
-         "Open"}, {$CellContext`omega2$$, 0, Pi, Appearance -> 
+      "Specifications" :> {{$CellContext`omega1$$, 0, 2 Pi, Appearance -> 
+         "Open"}, {$CellContext`omega2$$, 0, 2 Pi, Appearance -> 
          "Open"}, {$CellContext`ecc1$$, 0, 1, Appearance -> 
-         "Open"}, {$CellContext`ecc2$$, 0, 1, Appearance -> "Open"}}, 
+         "Open"}, {$CellContext`ecc2$$, 0, 1, Appearance -> 
+         "Open"}, {$CellContext`a1$$, 0, 1, Appearance -> 
+         "Open"}, {$CellContext`a2$$, 0, 1, Appearance -> "Open"}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{407., {294., 299.}},
+     ImageSizeCache->{407., {351., 356.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -161,9 +174,11 @@ Cell[BoxData[
    3.766484568678916*^9}, {3.766484608669298*^9, 3.7664846267341347`*^9}, 
    3.766484673712411*^9, 3.7670779447697077`*^9, {3.767079754692849*^9, 
    3.767079764701995*^9}, 3.767082908845121*^9, {3.767087173775251*^9, 
-   3.7670871815991173`*^9}, 
-   3.7670894964059763`*^9},ExpressionUUID->"54a1bbb6-19f7-41b6-8878-\
-654dd140c84f"]
+   3.7670871815991173`*^9}, 3.7670894964059763`*^9, 3.767686136371731*^9, {
+   3.767686193429595*^9, 3.767686197794537*^9}, 3.767686239333493*^9, 
+   3.767686383710301*^9, 
+   3.767686473802889*^9},ExpressionUUID->"9caaee41-f6a6-4aed-a96b-\
+55b97f51e4d9"]
 }, Open  ]]
 },
 WindowSize->{634, 632},
@@ -183,10 +198,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 3000, 68, 270, "Input", "ExpressionUUID" -> \
+Cell[580, 22, 3246, 73, 176, "Input", "ExpressionUUID" -> \
 "799f83a3-8923-401f-a0aa-f0684d6fe713"],
-Cell[3583, 92, 3985, 73, 642, "Output", "ExpressionUUID" -> \
-"54a1bbb6-19f7-41b6-8878-654dd140c84f"]
+Cell[3829, 97, 4630, 83, 724, "Output", "ExpressionUUID" -> \
+"9caaee41-f6a6-4aed-a96b-55b97f51e4d9"]
 }, Open  ]]
 }
 ]
