@@ -11,13 +11,9 @@ using namespace std;
 
 const double TWOPI = 2.0 * acos(-1.0);  // 2*Pi
 const double PI = TWOPI / 2.0;          // Pi
-const double G = 6.673e-11;   // Gravitationskonstante
-const double MS = 1.99e30;	// Sonnenmasse
-const double m1 = 5.0e-5*MS;     //Masse Guertel 1
-const double m2 = 1.0e-7*MS;     //Masse Guertel 2
-const double AE = 1.5e11;
-const double a1 = 60.0*AE;              // Große Bahnhalbachse
-const double a2 = 150.0*AE;
+const double G = 6.673e-11;   		// Gravitationskonstante
+const double MS = 1.99e30;		// Sonnenmasse
+const double AE = 1.5e11;		// Astronomische Einheit
 
 // Integration functions adapted from Press et al. (Numerical recipes in C++)
 
@@ -243,6 +239,12 @@ bool timeloop(const double &t0,const double &tf,const double &dt,const double &e
   
   return true;
 }
+
+const double m1 = 5.0e-5*MS;     	// Masse Guertel 1
+const double m2 = 1.0e-7*MS;     	// Masse Guertel 2
+const double a1 = 60.0*AE;              // Große Bahnhalbachse innerer Guertel
+const double a2 = 150.0*AE;		// Große Bahnhalbachse äußerer Guertel
+
 
 int main() {
   
